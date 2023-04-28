@@ -103,6 +103,11 @@ public final class CalendarView: UIView {
     return offset < scrollView.minimumOffset(for: scrollAxis) ||
       offset > scrollView.maximumOffset(for: scrollAxis)
   }
+    
+    /// Returns the internal scroll view's `contentOffset` value.
+    public var contentOffset: CGPoint {
+        return scrollView.contentOffset
+    }
 
   /// The range of months that are partially of fully visible.
   public var visibleMonthRange: MonthRange? {
